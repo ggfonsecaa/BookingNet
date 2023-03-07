@@ -1,0 +1,39 @@
+.bkn-drawer-menu-container {
+    height: 100%;
+    padding: 0.5em;
+}
+
+.bkn-menu-item {
+    display: flex;
+    height: 3em;
+    width: 100%;
+}
+
+.bkn-menu-text {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em;
+}
+
+.bkn-menu-name {
+    margin: 0;
+}
+
+.bkn-menu-expand-button {
+    aspect-ratio: 1;
+}
+
+.bkn-menu-text:hover {
+    background-color: #E4E7EC;
+    cursor: pointer;
+}
+
+.bkn-menu-text:active {
+    background-color: #d3d5d8;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+         box-shadow: inset 0px 0px 5px #c1c1c1;
+        outline: none;
+}

@@ -1,0 +1,27 @@
+.bkn-content-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    border-radius: 0.5em;
+}
+
+.bkn-route-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4em;
+    padding: 0.5em;
+}
+
+.bkn-route-name-text {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0;
+}
+
+.bkn-route-content {
+    height: 100%;
+    padding: 0.5em;
+}

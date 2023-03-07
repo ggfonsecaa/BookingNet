@@ -1,0 +1,42 @@
+.bkn-drawer-expand-maximized {
+    display: flex;
+    flex-direction: column;
+    min-width: 20em;
+    max-width: 20em;
+    height: 100%;
+    box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.bkn-drawer-expand-maximized.hidden {
+    min-width: 0;
+    max-width: 0;
+    overflow: hidden;
+    box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.25);
+    transition: all 0.4s ease-in-out;
+}
+
+.bkn-drawer-menu-tittle {
+    display: flex;
+    min-height: 5em;
+    padding: 0.5em;
+    align-items: center;
+    justify-content: center;
+}
+
+.bkn-tittle {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.bkn-separator {
+    width: 80%;
+    margin: auto;
+    color: #E4E7EC;
+}
+
+app-drawer-menu {
+    height: 100%;
+}

@@ -1,0 +1,13 @@
+<div class="bkn-drawer-expand-minimized">
+    <div class="bkn-drawer-toggle">
+        <app-button [imgSrc]="'../../../assets/images/menu.png'" (click)="onToggleDrawer()"></app-button>
+    </div>
+    <hr class="bkn-separator">
+    <div class="bkn-menu-list">
+        <app-menu (onMenuClick)="onMenuClick($event)"></app-menu>
+    </div>
+    <hr class="bkn-separator">
+    <div class="bkn-profile">
+        <app-button (click)="onMenuClick('Perfil')" [imgSrc]="'../../../assets/images/user.png'"></app-button>
+    </div>
+</div>

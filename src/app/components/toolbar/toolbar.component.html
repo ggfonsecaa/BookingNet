@@ -1,0 +1,16 @@
+<div class="bkn-toolbar-container">
+    <div class="bkn-toolbar-buttons">
+        <app-button *ngIf="allowAdd" [imgSrc]="'../../../assets/images/add.png'" (click)="agregar()"></app-button>
+        <app-button *ngIf="allowEdit" [imgSrc]="'../../../assets/images/edit.png'"></app-button>
+        <app-button *ngIf="allowSave" [imgSrc]="'../../../assets/images/save.png'" (click)="guardar()"></app-button>
+        <app-button *ngIf="allowDelete" [imgSrc]="'../../../assets/images/delete.png'" (click)="eliminar()"></app-button>
+        <app-button *ngIf="allowAprove" [imgSrc]="'../../../assets/images/check.png'" (click)="aprobar()"></app-button>
+        <app-button *ngIf="allowDecline" [imgSrc]="'../../../assets/images/decline.png'" (click)="rechazar()"></app-button>
+    </div>
+    <div class="bkn-filter-data-container">
+        <!-- <mat-form-field>
+            <input matInput  placeholder="Ex. Mia" #input>
+            (keyup)="applyFilter($event)"
+        </mat-form-field> -->
+    </div>
+</div>

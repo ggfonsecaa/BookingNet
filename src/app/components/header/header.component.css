@@ -1,0 +1,59 @@
+.bkn-header-container {
+    height: 5em;
+    padding: 0.5em;
+    display: flex;
+    width: 100%;
+}
+
+.bkn-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.5em;
+    background-color: #2B3048;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.bkn-header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    justify-content: flex-start;
+    padding: 0.5em;
+    width: 15%;
+}
+
+.bkn-header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    justify-content: flex-end;
+    padding: 0.5em;
+    width: 15%;
+}
+
+.bkn-header-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.bkn-app-name {
+    color: #FFF;
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.bkn-button-header {
+    width: 3em;
+    aspect-ratio: 1;
+}
+
+button {
+    color: transparent;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}

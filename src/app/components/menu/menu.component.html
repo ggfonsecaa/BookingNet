@@ -1,0 +1,8 @@
+<div class="bkn-menu-container">
+    <!-- <app-button [imgSrc]="'../../../assets/images/home.png'" (click)="onMenuItemClick('Inicio')"></app-button> -->
+    <app-button [imgSrc]="'../../../assets/images/booking.png'" (click)="onMenuItemClick('Servicios')"></app-button>
+    <app-button *ngIf="roleUser != 'Clientes'" [imgSrc]="'../../../assets/images/inventory.png'" (click)="onMenuItemClick('Inventarios')"></app-button>
+    <app-button [imgSrc]="'../../../assets/images/marketing.png'" (click)="onMenuItemClick('Comunicaciones')"></app-button>
+    <app-button *ngIf="roleUser == 'Clientes'" [imgSrc]="'../../../assets/images/report.png'" (click)="onMenuItemClick('Consultas')"></app-button>
+    <app-button *ngIf="roleUser != 'Clientes'" [imgSrc]="'../../../assets/images/setting.png'" (click)="onMenuItemClick('Configuracion')"></app-button>
+</div>

@@ -1,0 +1,28 @@
+.bkn-drawer-expand-minimized {
+    min-width: 5em;
+    max-width: 5em;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.bkn-drawer-toggle {
+    min-height: 5em;
+    padding: 0.5em;
+}
+
+.bkn-menu-list {
+    height: 100%;
+    padding: 0.5em;
+}
+
+.bkn-profile {
+    padding: 0.5em;
+}
+
+.bkn-separator {
+    width: 80%;
+    margin: auto;
+    color: #E4E7EC;
+}

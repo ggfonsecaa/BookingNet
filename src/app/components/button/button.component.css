@@ -1,0 +1,21 @@
+.bkn-button {
+    aspect-ratio: 1;
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+    border-radius: 0.5em;
+}
+
+.bkn-button:hover {
+    background-color: #E4E7EC;
+    cursor: pointer;
+}
+
+.bkn-button:active {
+    background-color: #d3d5d8;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+         box-shadow: inset 0px 0px 5px #c1c1c1;
+        outline: none;
+}

@@ -1,0 +1,7 @@
+.bkn-drawer-expand-container {
+    display: flex;
+    height: 100%;
+    max-width: 25em;
+    background-color: #FFF;
+    border-radius: 0.5em;
+}

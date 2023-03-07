@@ -1,0 +1,147 @@
+<div class="bkn-drawer-menu-container">
+        <div *ngIf="!menuToShow && (roleUser =='Clientes' || roleUser == 'Administradores')" class="bkn-menu-item">
+            <div class="bkn-menu-text">
+                <a class="bkn-menu-name" [routerLink]="['/services/bookings']">Reservas</a>
+            </div>
+            <!-- <div class="bkn-menu-expand-button">
+                <app-button [imgSrc]="'../../../assets/images/setting.png'"></app-button>
+            </div> -->
+        </div>
+        <div *ngIf="!menuToShow && (roleUser =='Usuarios' || roleUser == 'Administradores')" class="bkn-menu-item">
+            <div class="bkn-menu-text">
+                <a class="bkn-menu-name" [routerLink]="['/services/manage-bookings']">Gestión de reservas</a>
+            </div>
+            <!-- <div class="bkn-menu-expand-button">
+                <app-button [imgSrc]="'../../../assets/images/setting.png'"></app-button>
+            </div> -->
+        </div>
+    <div [ngTemplateOutlet]="menuToShow">
+
+    </div>
+</div>
+
+<ng-template #Inicio>
+    <div class="bkn-menu-item">
+        <div class="bkn-menu-text">
+            <a class="bkn-menu-name" [routerLink]="['/home']">Resúmen</a>
+        </div>
+        <!-- <div class="bkn-menu-expand-button">
+            <app-button [imgSrc]="'../../../assets/images/setting.png'"></app-button>
+        </div> -->
+    </div>
+</ng-template>
+
+<ng-template #Servicios>
+    <div *ngIf="roleUser =='Clientes' || roleUser == 'Administradores'" class="bkn-menu-item">
+        <div class="bkn-menu-text">
+            <a class="bkn-menu-name" [routerLink]="['/services/bookings']">Reservas</a>
+        </div>
+        <!-- <div class="bkn-menu-expand-button">
+            <app-button [imgSrc]="'../../../assets/images/setting.png'"></app-button>
+        </div> -->
+    </div>
+    <div *ngIf="roleUser =='Usuarios' || roleUser == 'Administradores'" class="bkn-menu-item">
+        <div class="bkn-menu-text">
+            <a class="bkn-menu-name" [routerLink]="['/services/manage-bookings']">Gestión de reservas</a>
+        </div>
+        <!-- <div class="bkn-menu-expand-button">
+            <app-button [imgSrc]="'../../../assets/images/setting.png'"></app-button>
+        </div> -->
+    </div>
+</ng-template>
+
+<ng-template #Inventarios>
+    <div *ngIf="roleUser =='Usuarios' || roleUser == 'Administradores'" class="bkn-menu-item">
+        <div class="bkn-menu-text">
+            <a class="bkn-menu-name" [routerLink]="['/inventory/products']">Productos</a>
+        </div>
+        <!-- <div class="bkn-menu-expand-button">
+            <app-button [imgSrc]="'../../../assets/images/setting.png'"></app-button>
+        </div> -->
+    </div>
+</ng-template>
+
+<ng-template #Comunicaciones>
+    <div class="bkn-menu-item">
+        <div class="bkn-menu-text">
+            <a class="bkn-menu-name" [routerLink]="['/communications/coming']">Próximos eventos</a>
+        </div>
+        <!-- <div class="bkn-menu-expand-button">
+            <app-button [imgSrc]="'../../../assets/images/setting.png'"></app-button>
+        </div> -->
+    </div>
+</ng-template>
+
+<ng-template #Consultas>
+    <div *ngIf="roleUser =='Clientes' || roleUser == 'Administradores'" class="bkn-menu-item">
+        <div class="bkn-menu-text">
+            <a class="bkn-menu-name" [routerLink]="['/consults/history']">Historial de reservas</a>
+        </div>
+        <!-- <div class="bkn-menu-expand-button">
+            <app-button [imgSrc]="'../../../assets/images/setting.png'"></app-button>
+        </div> -->
+    </div>
+    <!-- <div class="bkn-menu-item">
+        <div class="bkn-menu-text">
+            <a class="bkn-menu-name" [routerLink]="['/consults/reports']">Reportes</a>
+        </div>
+        <div class="bkn-menu-expand-button">
+            <app-button [imgSrc]="'../../../assets/images/setting.png'"></app-button>
+        </div>
+    </div> -->
+</ng-template>
+
+<ng-template #Configuracion>
+    <div *ngIf="roleUser =='Usuarios' || roleUser == 'Administradores'" class="bkn-menu-item">
+        <div class="bkn-menu-text">
+            <a class="bkn-menu-name" [routerLink]="['/config/flows']">Flujos de procesos</a>
+        </div>
+        <!-- <div class="bkn-menu-expand-button">
+            <app-button [imgSrc]="'../../../assets/images/setting.png'"></app-button>
+        </div> -->
+    </div>
+    <div *ngIf="roleUser =='Usuarios' || roleUser == 'Administradores'" class="bkn-menu-item">
+        <div class="bkn-menu-text">
+            <a class="bkn-menu-name" [routerLink]="['/config/users']">Usuarios</a>
+        </div>
+        <!-- <div class="bkn-menu-expand-button">
+            <app-button [imgSrc]="'../../../assets/images/setting.png'"></app-button>
+        </div> -->
+    </div>
+    <div *ngIf="roleUser =='Usuarios' || roleUser == 'Administradores'" class="bkn-menu-item">
+        <div class="bkn-menu-text">
+            <a class="bkn-menu-name" [routerLink]="['/config/groups']">Grupos</a>
+        </div>
+        <!-- <div class="bkn-menu-expand-button">
+            <app-button [imgSrc]="'../../../assets/images/setting.png'"></app-button>
+        </div> -->
+    </div>
+    <div *ngIf="roleUser =='Usuarios' || roleUser == 'Administradores'"  class="bkn-menu-item">
+        <div class="bkn-menu-text">
+            <a class="bkn-menu-name" [routerLink]="['/config/roles']">Roles</a>
+        </div>
+        <!-- <div class="bkn-menu-expand-button">
+            <app-button [imgSrc]="'../../../assets/images/setting.png'"></app-button>
+        </div> -->
+    </div>
+</ng-template>
+
+<ng-template #Perfil>
+    <div class="bkn-menu-item">
+        <div class="bkn-menu-text">
+            <a class="bkn-menu-name" [routerLink]="['/profile/myprofile']">Mi perfil</a>
+        </div>
+        
+        <!-- <div class="bkn-menu-expand-button">
+            <app-button [imgSrc]="'../../../assets/images/setting.png'"></app-button>
+        </div> -->
+    </div>
+    <div class="bkn-menu-item">
+        <div class="bkn-menu-text">
+            <a class="bkn-menu-name" [routerLink]="['/auth/signout']">Cerrar sesión</a>
+        </div>
+        <!-- <div class="bkn-menu-expand-button">
+            <app-button [imgSrc]="'../../../assets/images/setting.png'"></app-button>
+        </div> -->
+    </div>
+</ng-template>

@@ -1,0 +1,62 @@
+<div class="container d-flex align-items-center justify-content-center h-100">
+    
+    <form [formGroup]="validator" class="bkn-form">
+        <p class="bkn-form-tittle">Inicio de sesión</p>
+        <!-- Email input -->
+        <div class="form-floating mb-3">
+            <input formControlName="UserEmail" type="email" class="form-control" id="email" placeholder="groupexample"
+            [ngClass]="(validator.controls['UserEmail'].touched || validator.controls['UserEmail'].dirty) && validator.controls['UserEmail'].errors ? 'is-invalid' : '' ">
+            <label for="email">Correo electrónico</label>
+            <div class="invalid-feedback">
+                <div *ngIf="validator.controls['UserEmail'].errors?.['required']">
+                    El campo es requerido
+                </div>
+                <div *ngIf="validator.controls['UserEmail'].errors?.['maxlength']">
+                    El campo no debe tener más de 50 caracteres
+                </div>
+                <div *ngIf="validator.controls['UserEmail'].errors?.['email']">
+                    Debe ingresar una dirección de correo válida
+                </div>
+            </div>
+        </div>
+      
+        <!-- Password input -->
+        <div class="form-floating mb-3">
+            <input formControlName="PassWord" type="password" class="form-control" id="password" placeholder="groupexample"
+            [ngClass]="(validator.controls['PassWord'].touched || validator.controls['PassWord'].dirty) && validator.controls['PassWord'].errors ? 'is-invalid' : '' ">
+            <label for="password">Contraseña</label>
+            <div class="invalid-feedback">
+                <div *ngIf="validator.controls['PassWord'].errors?.['required']">
+                    El campo es requerido
+                </div>
+                <div *ngIf="validator.controls['PassWord'].errors?.['maxlength']">
+                    El campo no debe tener más de 20 caracteres
+                </div>
+                <div *ngIf="validator.controls['PassWord'].errors?.['minlength']">
+                    El campo debe tener al menos 8 caracteres
+                </div>
+            </div>
+        </div>
+      
+        <!-- 2 column grid layout for inline styling -->
+        <div class="row mb-4">
+            <div class="col d-flex justify-content-start mb-3">
+                <!-- Checkbox -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                    <label class="form-check-label" for="form2Example31"> Recordarme </label>
+                </div>
+            </div>
+               
+            <!-- Submit button -->
+            <div>
+                <button [disabled]="!validator.valid" type="button" class="btn btn-primary btn-block mb-2 w-100" (click)="iniciarSesion()">Iniciar sesión</button>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <!-- Simple link -->
+                <a href="#!">Olvido su contraseña?</a>
+            </div>
+        </div>
+    </form>
+</div>

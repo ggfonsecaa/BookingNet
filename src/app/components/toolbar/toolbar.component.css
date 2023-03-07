@@ -1,0 +1,21 @@
+.bkn-toolbar-container {
+    height: 4em;
+    display: flex;
+    width: 100%;
+    padding: 0.5em;
+}
+
+.bkn-toolbar-buttons > app-button {
+    width: 3em;
+}
+
+.bkn-toolbar-buttons {
+    display: flex;
+    width: 60%;
+    gap: 0.3em;
+}
+
+.bkn-filter-data-container {
+    display: flex;
+    width: 40%;
+}

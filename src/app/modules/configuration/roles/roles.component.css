@@ -1,0 +1,51 @@
+.bkn-main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.bkn-table-container {
+    display: flex;
+    padding: 0.5em;
+    overflow-y: auto;
+    height: calc(100vh - 13em);
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    background-color: #C9C9C9;
+}
+
+.mat-elevation-z8 {
+    width: 100%;
+    box-shadow: none !important;
+}
+
+tr:hover {
+    background-color: #E4E7EC !important;
+    cursor: pointer;
+}
+
+tr:focus {
+    background-color: #d3d5d8 !important;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+         box-shadow: inset 0px 0px 5px #c1c1c1;
+        outline: none;
+}
+
+.bkn-no-content-cell {
+    height: 5em;
+    text-align: center;
+}
+
+.bkn-spinner {
+    position: absolute;
+    width: calc(100vw - 27.5em);
+    height: calc(100vh - 14em);
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    background: rgba(228, 231, 236, 0.7);
+}
